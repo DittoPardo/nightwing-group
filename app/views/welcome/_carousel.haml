@@ -8,12 +8,15 @@
     .item.active
       %img{ src: "@path slider1.jpg", alt: ""}/
       %h2 Raise funds for your projects
+      = link_to "Create project", new_project_path
     .item
       %img{ src: "@path slider2.jpg", alt: ""}/
       %h2 Back interesting projects
+      = link_to "Create project", new_project_path
     .item
       %img{ src: "@path slider3.jpg", alt: ""}/
       %h2 Be a part of the greatest community!
+      = link_to "Create project", new_project_path
 
   %a.left.carousel-control{ href: "#slide-images", role: "button", data: { slide: "prev"}}
     %i.fa.fa-angle-double-left
