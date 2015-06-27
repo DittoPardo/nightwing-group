@@ -8,7 +8,8 @@
     .collapse.navbar-collapse.navbar-ex1-collapse#toggled
       %ul.nav.navbar-nav.navbar-right
         - if current_user
-          %li.navbar-text= raw "Loged as: #{link_to current_user.email, user_path(current_user.id)}"
+          =link_to current_user do
+            %li.navbar-text= current_user.email
           %li.navbar-tesxt= link_to 'Logout', destroy_user_session_path, method: :delete
         - else
           %li.navbar-text=link_to 'Sign up', new_user_registration_path
