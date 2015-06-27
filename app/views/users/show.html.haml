@@ -1,7 +1,13 @@
-%tr
-  %td Email:
-  %td= user.email
-%tr
-  %td Name:
-  %td= user.name
-%tr
+%table.table
+  %thead
+    %tr
+      %th #
+      %th Name
+      %th Email
+      %th Edit
+  %tbody
+    %tr
+      %td= user.id
+      %td= user.name
+      %td= user.email
+      %td= link_to "Edit", edit_user_registration_path
