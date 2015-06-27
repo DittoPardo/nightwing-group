@@ -33,6 +33,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'app_konfig'
 
 group :development do
   gem 'html2haml'
