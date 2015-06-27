@@ -1,5 +1,5 @@
 require 'faker'
-user = create(:user)
+user = FactoryGirl.create(:user)
 
 5.times do |n|
   Project.create!(
