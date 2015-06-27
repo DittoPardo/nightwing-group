@@ -10,7 +10,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'decent_exposure'
 
-
 group :development, :test do
   gem 'pry-byebug'
   gem 'better_errors'
@@ -23,6 +22,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'database_cleaner'
 end
 
 gem 'devise'

@@ -87,6 +87,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
+    database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     decent_exposure (2.3.2)
     devise (3.5.1)
@@ -290,6 +291,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   coffee-rails (~> 4.1.0)
+  database_cleaner
   decent_exposure
   devise
   factory_girl_rails
