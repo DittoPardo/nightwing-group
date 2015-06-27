@@ -1,13 +1,36 @@
-%table.table
-  %thead
-    %tr
-      %th #
-      %th Name
-      %th Email
-      %th Edit
-  %tbody
-    %tr
-      %td= user.id
-      %td= user.name
-      %td= user.email
-      %td= link_to "Edit", edit_user_registration_path
+.user.row
+  .col-md-1
+  .col-md-10
+    %table.table.table-striped.wide-table
+      %thead
+        %tr
+          %th #
+          %th Name
+          %th Email
+          %th Edit
+      %tbody
+        %tr
+          %td= user.id
+          %td= user.name
+          %td= user.email
+          %td= link_to "Edit", edit_user_registration_path
+  .col-md-1
+
+.user-projects.row
+  .col-md-1
+  .col-md-10
+    %h4 Projects created by this user:
+    %table.table.table-striped.wide-table
+      %thead
+        %tr
+          %th #
+          %th Name
+          %th Description
+          %th
+      %tbody
+        - user.owned_projects.each do |project|
+          %tr
+            %td= ""
+            %td= project.name
+            %td= project.description
+  .col-md-1
