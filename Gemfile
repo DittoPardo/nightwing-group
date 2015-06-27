@@ -17,6 +17,13 @@ group :development, :test do
   gem 'spring'
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
+
 gem 'devise'
 gem 'haml-rails'
 gem 'pg'
