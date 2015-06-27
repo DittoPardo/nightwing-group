@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 20150627121139) do
   create_table "project_contributions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "project_id"
     t.string   "comment"
     t.float    "amount"
   end
@@ -85,16 +87,6 @@ ActiveRecord::Schema.define(version: 20150627121139) do
     t.datetime "updated_at", null: false
     t.integer  "project_id"
   end
-
-  create_table "table_project_contributions", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "project_id"
-    t.string  "comment"
-    t.float   "amount"
-  end
-
-  add_index "table_project_contributions", ["project_id"], name: "index_table_project_contributions_on_project_id", using: :btree
-  add_index "table_project_contributions", ["user_id"], name: "index_table_project_contributions_on_user_id", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.datetime "created_at", null: false
