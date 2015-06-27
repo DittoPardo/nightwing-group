@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  expose(:user)
+  expose(:user) { current_user }
+  before_action :authenticate_user!
 
   def show
   end
