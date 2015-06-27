@@ -1,21 +1,21 @@
-#carousel-example-generic.carousel.slide{ id: "slide-images", data: { ride: "carousel" }}
+.carousel.slide{ id: "slide-images", data: { ride: "carousel" }}
   %ol.carousel-indicators
     %li.active{ data: { target: "#slide-images", slide_to: "0" }}
     %li{ data: { target: "#slide-images", slide_to: "1" }}
     %li{ data: { target: "#slide-images", slide1_to: "2" }}
+
   .carousel-inner
     .item.active
       %img{ src: "@path slider1.jpg", alt: ""}/
+      %h2 Raise funds for your projects
     .item
       %img{ src: "@path slider2.jpg", alt: ""}/
+      %h2 Back interesting projects
     .item
       %img{ src: "@path slider3.jpg", alt: ""}/
-    .item
-      %img{ src: "@path slider4.jpg", alt: ""}/
-    .item
-      %img{ src: "@path slider5.jpg", alt: ""}/
+      %h2 Be a part of the greatest community!
 
-  %a.left.carousel-control{ href: "#slide-images", data: { slide: "prev"}}
+  %a.left.carousel-control{ href: "#slide-images", role: "button", data: { slide: "prev"}}
     %i.fa.fa-angle-double-left
-  %a.right.carousel-control{ href: "#slide-images", data: { slide: "next" }}
-    %i.fa.fa-angle-double-left
+  %a.right.carousel-control{ href: "#slide-images", role: "button", data: { slide: "next" }}
+    %i.fa.fa-angle-double-right
