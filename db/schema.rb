@@ -49,21 +49,17 @@ ActiveRecord::Schema.define(version: 20150627121139) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "backed_projects", force: :cascade do |t|
+    t.integer "backer_id"
+    t.integer "backed_project_id"
+  end
+
+  add_index "backed_projects", ["backed_project_id"], name: "index_backed_projects_on_backed_project_id", using: :btree
+  add_index "backed_projects", ["backer_id"], name: "index_backed_projects_on_backer_id", using: :btree
+
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "project_id"
-  end
-
-  add_index "comments", ["project_id"], name: "index_comments_on_project_id", using: :btree
-
-  create_table "project_contributions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.integer  "project_id"
-    t.string   "comment"
-    t.float    "amount"
   end
 
   create_table "projects", force: :cascade do |t|

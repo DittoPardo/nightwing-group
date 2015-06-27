@@ -4,8 +4,6 @@ class ProjectsController < ApplicationController
   expose(:projects)
 
   def index
-    @q = Project.ransack(params[:q])
-    @projects = @q.result
   end
 
   def show
@@ -27,6 +25,6 @@ class ProjectsController < ApplicationController
 
   private
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.fetch(:project, {}).permit(:name, :description)
     end
 end
