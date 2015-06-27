@@ -4,6 +4,8 @@ class ProjectsController < ApplicationController
   expose(:projects)
 
   def index
+    @q = Project.ransack(params[:q])
+    @projects = @q.result
   end
 
   def show
