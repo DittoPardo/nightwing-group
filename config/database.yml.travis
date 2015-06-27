@@ -1,0 +1,9 @@
+test:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: nightwing_test
+  pool:     5
+  username: postgres
+  password: postgres
+  template: template0
