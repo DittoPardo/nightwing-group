@@ -5,4 +5,5 @@ describe Project do
 	it { should have_many(:comments) }
 	it { should have_many(:rewards) }
 	it { should have_and_belong_to_many(:tags) }
+  it { should have_and_belong_to_many(:backers).with_foreign_key('backed_project_id')}
 end
