@@ -1,11 +1,15 @@
-%nav.navbar.navbar-default
-  .container-fluid
+%nav.navbar.navbar-inverse
+  .container
     .navbar-header
       =link_to root_path do
         %span.navbar-brand NightWing
-        %span Discover
-        %span Search Projects
+      %p.navbar-text Discover
+      %p.navbar-text Search Projects
     .collapse.navbar-collapse.navbar-ex1-collapse#toggled
       %ul.nav.navbar-nav.navbar-right
-        %li Sign up
-        %li Sign in
+        - if current_user 
+          %li.navbar-text= current_user.email
+          %li.navbar-tesxt= link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          %li.navbar-text=link_to 'Sign up', new_user_registration_path
+          %li.navbar-text=link_to 'Sign in', new_user_session_path
