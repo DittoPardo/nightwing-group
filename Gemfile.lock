@@ -307,6 +307,7 @@ DEPENDENCIES
   pry-byebug
   rails (= 4.2.1)
   rails_layout
+  ransack
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers

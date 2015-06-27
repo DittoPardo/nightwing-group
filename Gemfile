@@ -35,6 +35,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'app_konfig'
 gem 'activeadmin', github: 'activeadmin'
+gem 'ransack'
 
 group :development do
   gem 'html2haml'
