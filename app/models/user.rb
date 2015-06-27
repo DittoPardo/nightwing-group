@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, omniauth_providers: [:facebook]
 
   has_many :owned_projects, class_name: 'Project', foreign_key: :owner_id
-  has_many :project_contributions, foreign_key: :project_id
+  has_many :project_contributions
   has_many :comments
 
   validates_presence_of :email, :name
