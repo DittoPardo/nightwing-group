@@ -31,7 +31,8 @@ gem 'pg'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'html2haml'
