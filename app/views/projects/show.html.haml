@@ -20,18 +20,20 @@
         = project.rewards.count
       rewards
     .col-md-12.project_info.supporters
-      %h4
-        Tags
-      %ul.list-unstyled
-        - project.tags.each do |tag|
-          %li= tag
+      - if project.tags.present?
+        %h4
+          Tags
+        %ul.list-unstyled
+          - project.tags.each do |tag|
+            %li= tag
     .col-md-12.project_info.supporters
-      %h4
-        Supporters
-      %ul.list-unstyled
-        - project.project_contributions.each do |contribution|
-          %li
-            = contribution.user.name
+      - if project.project_contributions.present?
+        %h4
+          Supporters
+        %ul.list-unstyled
+          - project.project_contributions.each do |contribution|
+            %li
+              = contribution.user.name
     .col-md-12.project_info
       - if current_user.present? and current_user == project.owner
         = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
