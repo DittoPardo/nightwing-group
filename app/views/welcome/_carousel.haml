@@ -6,19 +6,25 @@
 
   .carousel-inner.text-center
     .item.active
-      %img{ src: "@path slider1.jpg", alt: ""}/
-      %h2 Raise funds for your projects
-      = link_to "Create project", new_project_path, class: 'btn btn-success'
+      .fill{ style: "background-image: url(#{image_path 'pexels1.jpg'})"}
+      .carousel-caption
+        %h1 Raise funds and pursue your ideas
+        = link_to "Create project", new_project_path, class: 'btn btn-success'
     .item
-      %img{ src: "@path slider2.jpg", alt: ""}/
-      %h2 Back interesting projects
-      = link_to "Create project", new_project_path, class: 'btn btn-success'
+      .fill{ style: "background-image: url(#{image_path 'pexels2.jpg'})"}
+      .carousel-caption
+        %h1 Back interesting projects
+        = link_to "Discover projects", projects_path, class: 'btn btn-success'
     .item
-      %img{ src: "@path slider3.jpg", alt: ""}/
-      %h2 Be a part of the greatest community!
-      = link_to "Create project", new_project_path, class: 'btn btn-success'
+      .fill{ style: "background-image: url(#{image_path 'pexels3.jpg'})"}
+      .carousel-caption
+        %h1 Be a part of the greatest community!
+        = link_to "Sign up", new_user_registration_path, class: 'btn btn-success'
 
   %a.left.carousel-control{ href: "#slide-images", role: "button", data: { slide: "prev"}}
-    %i.fa.fa-angle-double-left
+    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+    %span.sr-only Previous
+
   %a.right.carousel-control{ href: "#slide-images", role: "button", data: { slide: "next" }}
-    %i.fa.fa-angle-double-right
+    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+    %span.sr-only Next
