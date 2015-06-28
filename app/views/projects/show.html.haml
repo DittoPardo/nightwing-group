@@ -22,6 +22,12 @@
       rewards
     .col-md-12.project_info.supporters
       %h4
+        Tags
+      %ul.list-unstyled
+        - project.tags.each do |tag|
+          %li= tag
+    .col-md-12.project_info.supporters
+      %h4
         Supporters
       %ul.list-unstyled
         - project.project_contributions do |contribution|
