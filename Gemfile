@@ -44,5 +44,6 @@ gem 'cloudinary'
 group :development do
   gem 'html2haml'
   gem 'rails_layout'
+  gem 'quiet_assets'
 end
 
