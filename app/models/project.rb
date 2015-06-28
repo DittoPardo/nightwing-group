@@ -7,4 +7,6 @@ class Project < ActiveRecord::Base
   has_many :project_contributions
 
   validates :name, :owner, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
