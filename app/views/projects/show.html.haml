@@ -31,7 +31,7 @@
       %ul.list-unstyled
         - project.project_contributions.each do |contribution|
           %li
-            contribution.name
+            = contribution.user.name
     .col-md-12.project_info
       = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
       = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
