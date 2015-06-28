@@ -3,8 +3,9 @@ class ProjectContributionsController < ApplicationController
   expose(:project)
 
   def create
+    project_contribution.user = current_user
+
     if project_contribution.save
-      project.project_contributions << project_contribution
       redirect_to project, flash: { success: 'Thank you for contributing!' }
     else
       render 'new'
