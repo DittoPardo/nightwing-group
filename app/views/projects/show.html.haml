@@ -48,3 +48,7 @@
 %br
 %h3 Comments:
 = render 'comments/list', project: project
+
+  %button.btn.btn-success.btn-lg{"data-target": "#myModal", "data-toggle": "modal", type: "button"} Contribute
+
+= render 'project_contributions/modal'

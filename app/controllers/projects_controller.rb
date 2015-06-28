@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   expose(:comments) { project.comments }
   expose(:comment) { Comment.new }
   expose(:found_projects) { q.result }
+  expose(:project_contribution) { ProjectContribution.new }
 
   def create
     project.owner = current_user
