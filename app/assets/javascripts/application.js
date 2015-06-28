@@ -13,5 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require froala_editor.min.js
+//= require plugins/fullscreen.min.js
 //= require bootstrap-sprockets
+//= require wysiwyg
 //= require_tree .

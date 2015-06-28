@@ -9,9 +9,8 @@
 .row
   .col-md-8
     %img{src: 'http://dummyimage.com/600x400/237d00/ffffff', alt: project.name}
-    .project_description
-      = project.description
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae asperiores nobis pariatur et ab voluptatibus magni aspernatur modi dolores, provident, harum consequuntur delectus esse aliquid, possimus quo quis rerum. Dolore ea explicabo qui minus ullam illum consequuntur impedit, dolorem nisi, provident earum. Quos quis non harum explicabo totam, provident sed sit. Ex quia, quaerat enim veniam magni corporis tempora culpa eius blanditiis neque laborum sed, nam, consequatur ipsum. Nihil ab officia, maxime dolore aspernatur enim accusantium molestias, magnam ad laudantium tempora corrupti non alias quis consequatur saepe sed ut. Voluptas cupiditate, atque veritatis voluptates maxime quidem praesentium tempore dignissimos voluptatibus.
+    .project_description.froala-view
+      = simple_format project.description
   .col-md-4
     .col-md-12.project_info
       %i.fa.fa-bullhorn

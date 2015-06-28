@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'decent_exposure'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'wysiwyg-rails'
 
 group :development, :test do
   gem 'pry-byebug'
