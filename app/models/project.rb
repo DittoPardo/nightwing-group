@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  acts_as_taggable
+
   has_many :comments
   has_many :rewards
   belongs_to :owner, class_name: 'User'

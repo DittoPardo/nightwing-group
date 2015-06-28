@@ -3,6 +3,7 @@
     = simple_form_for project do |f|
       .form-inputs
         = f.input :name
+        = f.input :tag_list
         = f.input :description, class: 'form-control'
       .form-actions
         = f.submit 'Save', class: 'btn btn-default btn-block'
