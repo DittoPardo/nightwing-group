@@ -47,3 +47,20 @@
         = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
         = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
       = link_to 'Back', :back, class: 'btn btn-default'
+
+%br
+%br
+.new-project-module.row
+  .col-md-12
+    .panel.panel-success
+      .panel-heading
+        %h3.panel-title Create comment
+      .panel-body
+        = render 'comments/form'
+%br
+%h3 Comments:
+= render 'comments/list', project: project
+
+%button.btn.btn-success.btn-lg{"data-target": "#myModal", "data-toggle": "modal", type: "button"} Contribute
+
+= render 'project_contributions/modal'
