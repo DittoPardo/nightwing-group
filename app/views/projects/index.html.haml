@@ -2,5 +2,10 @@
   .row
     .col-lg-4
       .well
-        %h2= link_to project.name, project
-        %p= project.description
+        .row
+          .col-md-3
+            %img{src: 'http://dummyimage.com/200x200/237d00/ffffff', alt: project.name}
+          
+          .col-md-9
+            %h2= link_to project.name, project
+            %p= project.description
