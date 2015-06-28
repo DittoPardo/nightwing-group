@@ -19,28 +19,5 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "custom";
 
-.inputs-modal {
-  padding: 20px;
-}
-
-.navbar-inverse {
-  border-radius: 0px;
-}
-
-.tags {
-  font-size: 14px;
-  margin-top: 75px;
-  .label {
-    margin-right: 10px;
-  }
-}
-
-.new-project-tags {
-  .tags {
-    margin-top: 0px;
-    label {
-      margin-left: 10px;
-    }
-  }
-}
