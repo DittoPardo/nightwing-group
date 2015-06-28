@@ -12,6 +12,14 @@
           - else
             %label Add photo
             = f.file_field :photo
+            
+        %h3 Rewards
+        = f.simple_fields_for :rewards do |r|
+          .duplicatable_nested_form
+            = r.input :price
+            = r.input :description
+        = link_to 'Add Another Reward', '', :class => 'duplicate_nested_form', remote: true
+      
       .form-actions
         = f.submit 'Save', class: 'btn btn-default btn-block'
         %br

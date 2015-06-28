@@ -7,9 +7,14 @@ class ProjectsController < ApplicationController
   expose(:comments) { project.comments }
   expose(:comment) { Comment.new }
   expose(:project_contribution) { ProjectContribution.new }
-
+  
+  def new
+    project.rewards.build
+  end
+  
   def create
     project.owner = current_user
+
     if project.save
       flash[:success] = 'Project was successfully created.'
       redirect_to project
@@ -41,7 +46,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :description, :tag_list, :photo)
+    params.require(:project).permit(:name, :description, :tag_list, :photo, rewards_attributes: [:price, :description])
   end
-
 end
