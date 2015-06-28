@@ -2,15 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.page-header {
+  p {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+
 .project_info {
   padding-bottom: 35px;
-  h4 {
-    font-size: 25px;
-  }
+  font-size: 20px;
 
   .owner {
     h4 {
       margin-bottom: 0px;
     }
   }
+}
+
+.project_supporters {
+  font-size: 16px;
+}
+
+.project_description {
+  padding: 25px 0;
+  line-height: 1.8;
+  font-size: 16px;
 }

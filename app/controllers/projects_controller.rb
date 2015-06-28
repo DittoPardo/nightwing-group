@@ -2,8 +2,8 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
   expose(:project, attributes: :project_params)
   expose(:projects)
-  expose(:comments) {project.comments}
-  expose(:comment) {Comment.new}
+  expose(:comments) { project.comments }
+  expose(:comment) { Comment.new }
   expose(:found_projects) { q.result }
 
   def create

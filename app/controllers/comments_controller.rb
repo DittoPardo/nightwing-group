@@ -12,15 +12,18 @@ class CommentsController < ApplicationController
     comment.project_id = project.id
     if comment.save
       project.comments << comment
-      redirect_to project_url(project), notice: 'Comment was successfully created.'
+      redirect_to project_url(project)
+      flash[:success] = 'Comment was successfully created.'
     else
-      redirect_to project_url(project), alert: 'Can\'t create comment. Enter text.'
+      redirect_to project_url(project)
+      flsh[:danger] = 'Can\'t create comment. Enter text.'
     end
   end
 
   def destroy
     comment.destroy
-    redirect_to project_url, notice: 'Comment was successfully destroyed.'
+    redirect_to project_url
+    flash[:danger] = 'Comment was successfully destroyed.'
   end
 
   private

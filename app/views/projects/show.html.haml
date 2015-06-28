@@ -3,6 +3,9 @@
     .page-header
       %h2.text-center
         = project.name
+        %p
+          by
+          = project.owner.name
 .row
   .col-md-8
     %img{src: 'http://dummyimage.com/600x400/237d00/ffffff', alt: project.name}
@@ -10,10 +13,6 @@
       = project.description
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae asperiores nobis pariatur et ab voluptatibus magni aspernatur modi dolores, provident, harum consequuntur delectus esse aliquid, possimus quo quis rerum. Dolore ea explicabo qui minus ullam illum consequuntur impedit, dolorem nisi, provident earum. Quos quis non harum explicabo totam, provident sed sit. Ex quia, quaerat enim veniam magni corporis tempora culpa eius blanditiis neque laborum sed, nam, consequatur ipsum. Nihil ab officia, maxime dolore aspernatur enim accusantium molestias, magnam ad laudantium tempora corrupti non alias quis consequatur saepe sed ut. Voluptas cupiditate, atque veritatis voluptates maxime quidem praesentium tempore dignissimos voluptatibus.
   .col-md-4
-    .col-md-12.owner.project_info
-      %h4
-        = project.owner.name
-      Project owner
     .col-md-12.project_info
       %i.fa.fa-bullhorn
         = project.comments.count
@@ -21,25 +20,27 @@
       %i.fa.fa-comment
         = project.rewards.count
       rewards
-    .col-md-12.project_info
+    .col-md-12.project_info.supporters
       %h4
         Supporters
       %ul.list-unstyled
         - project.project_contributions do |contribution|
           %li
             contribution.name
+        %li
+          Pierwszy
+        %li
+          Drugi
     .col-md-12.project_info
       = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
       = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
-
-%button.btn.btn-success Back this project
+      = link_to 'Back', :back, class: 'btn btn-default'
 
 %br
 %br
 .new-project-module.row
-  .col-md-1
-  .col-md-10
-    .panel.panel-info
+  .col-md-12
+    .panel.panel-success
       .panel-heading
         %h3.panel-title Create comment
       .panel-body

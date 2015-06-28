@@ -63,20 +63,7 @@ ActiveRecord::Schema.define(version: 1) do
   create_table "project_contributions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "project_id"
     t.integer  "user_id"
-    t.integer  "project_id"
-    t.string   "comment"
-    t.float    "amount"
-  end
-
-  add_index "comments", ["project_id"], name: "index_comments_on_project_id", using: :btree
-
-  create_table "project_contributions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.string   "text"
     t.integer  "project_id"
     t.string   "comment"
     t.float    "amount"
