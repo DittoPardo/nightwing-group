@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   expose(:projects)
   expose(:comments) {project.comments}
   expose(:comment) {Comment.new}
+  expose(:found_projects) { q.result }
 
   def index
   end
