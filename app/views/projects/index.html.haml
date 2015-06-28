@@ -1,8 +1,6 @@
-%table.projects
-  %tr
-    %th= sort_link @q, :name, "Name"
-    %th= sort_link @q, :description, "Description"
-  - @found_projects.each do |project|
-    %tr
-      %td= link_to(project.name, project)
-      %td= project.description
+- @found_projects.each do |project|
+  .row
+    .col-lg-4
+      .well
+        %h2= link_to project.name, project
+        %p= project.description
