@@ -8,7 +8,10 @@
           = project.owner.name
 .row
   .col-md-8
-    %img{src: 'http://dummyimage.com/600x400/237d00/ffffff', alt: project.name}
+    - if project.photo
+      = image_tag project.photo.url(:medium), alt: project.name
+    - else
+      %img{src: 'http://dummyimage.com/600x400/237d00/ffffff', alt: project.name}
     .project_description.froala-view
       = simple_format project.description
   .col-md-4

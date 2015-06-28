@@ -5,6 +5,13 @@
         = f.input :name
         = f.input :tag_list
         = f.input :description, class: 'form-control'
+        .form-group
+          - if project.photo?
+            %label Current photo
+            =image_tag project.photo.url(:thumb)
+          - else
+            %label Add photo
+            = f.file_field :photo
       .form-actions
         = f.submit 'Save', class: 'btn btn-default btn-block'
         %br
