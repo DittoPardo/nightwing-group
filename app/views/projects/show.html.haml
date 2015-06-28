@@ -13,10 +13,10 @@
       = simple_format project.description
   .col-md-4
     .col-md-12.project_info
-      %i.fa.fa-bullhorn
+      %i.fa.fa-comment
         = project.comments.count
       comments
-      %i.fa.fa-comment
+      %i.fa.fa-bullhorn
         = project.rewards.count
       rewards
     .col-md-12.project_info.supporters
@@ -29,13 +29,9 @@
       %h4
         Supporters
       %ul.list-unstyled
-        - project.project_contributions do |contribution|
+        - project.project_contributions.each do |contribution|
           %li
             contribution.name
-        %li
-          Pierwszy
-        %li
-          Drugi
     .col-md-12.project_info
       = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
       = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
