@@ -18,3 +18,5 @@
 /config/database.yml
 *.swp
 /config/secrets.yml
+
+.env
