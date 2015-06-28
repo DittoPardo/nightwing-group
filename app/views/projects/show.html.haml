@@ -9,7 +9,7 @@
             = project.owner.name
 .row
   .col-md-8
-    - if project.photo
+    - unless project.photo.nil?
       = image_tag project.photo.url(:medium), alt: project.name
     - else
       %img{src: 'http://dummyimage.com/600x400/237d00/ffffff', alt: project.name}

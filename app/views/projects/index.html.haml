@@ -3,10 +3,13 @@
     .col-lg-12
       .well
         .row
-          .col-md-3
-            %img{src: 'http://dummyimage.com/200x200/237d00/ffffff', alt: project.name}
+          .col-md-4.text-center
+            - if project.photo?
+              = image_tag project.photo.url(:thumb)
+            - else
+              %img{src: 'http://1.bp.blogspot.com/-PJyt12nd17s/T5ZEcR9p5fI/AAAAAAAAANc/0ORWu4BWGeY/s000/random_grey_variations.png', alt: project.name}
 
-          .col-md-9
+          .col-md-8
             %h2= link_to project.name, project
             = project.pretty_tag
 
