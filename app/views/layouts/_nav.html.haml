@@ -9,7 +9,7 @@
         .input-group
           = f.search_field :name_or_description_cont, :class => "form-control"
           .input-group-btn
-            = f.submit "Search"
+            = f.submit "Search", :class => "btn btn-default"
     .collapse.navbar-collapse.navbar-ex1-collapse#toggled
       %ul.nav.navbar-nav.navbar-right
         - if current_user
