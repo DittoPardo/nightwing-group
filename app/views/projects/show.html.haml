@@ -33,8 +33,9 @@
           %li
             = contribution.user.name
     .col-md-12.project_info
-      = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
-      = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
+      - if current_user.present? and current_user == project.owner
+        = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
+        = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
       = link_to 'Back', :back, class: 'btn btn-default'
 
 %br
