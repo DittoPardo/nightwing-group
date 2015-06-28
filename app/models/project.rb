@@ -9,4 +9,10 @@ class Project < ActiveRecord::Base
   validates :name, :owner, presence: true
 
   mount_uploader :photo, PhotoUploader
+
+  private
+
+  def self.ransackable_scopes(auth_object = nil)
+    %i(tagged_with)
+  end
 end
