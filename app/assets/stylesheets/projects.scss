@@ -1,3 +1,16 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.project_info {
+  padding-bottom: 35px;
+  h4 {
+    font-size: 25px;
+  }
+
+  .owner {
+    h4 {
+      margin-bottom: 0px;
+    }
+  }
+}
