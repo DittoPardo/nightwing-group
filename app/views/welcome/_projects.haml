@@ -1,0 +1,12 @@
+- latest_projects.each_slice(3) do |slice|
+  - slice.each do |project|
+    .col-lg-4
+      .thumbnail.text-center
+        - if project.photo?
+          = image_tag project.photo.url(:thumb)
+        - else
+          %img{src: 'http://1.bp.blogspot.com/-PJyt12nd17s/T5ZEcR9p5fI/AAAAAAAAANc/0ORWu4BWGeY/s000/random_grey_variations.png', alt: project.name}
+        .caption
+          %h2
+            = link_to project.name, project
+            = project.pretty_tag

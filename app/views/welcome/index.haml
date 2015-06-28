@@ -3,20 +3,12 @@
 .row.text-center
   .col-lg-12
     %h1 Welcome to Nightwing!
+    %hr.divider
+
+.row
+  .col-lg-12.text-center
+    %h3 Take a look at our latest projects...
 
 .row
   .col-lg-12
-    %h2 Popular projects
-
-- popular_projects.each do |project|
-  .row
-    .col-lg-12
-      .well
-        .row
-          .col-md-3
-            %img{src: 'http://dummyimage.com/200x200/237d00/ffffff', alt: project.name}
-          
-          .col-md-9
-            %h2
-              = link_to project.name, project
-            = project.pretty_tag
+    =render 'projects'
