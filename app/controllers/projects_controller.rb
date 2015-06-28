@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
   expose(:comments) { project.comments }
   expose(:comment) { Comment.new }
   expose(:project_contribution) { ProjectContribution.new }
+  expose(:rewards) { project.rewards }
   
   def new
     project.rewards.build

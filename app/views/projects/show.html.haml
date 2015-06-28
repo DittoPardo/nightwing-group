@@ -33,7 +33,15 @@
         = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
         = link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-small'
       = link_to 'Back', :back, class: 'btn btn-default'
-
+    
+    .col-md-12
+      %h3 Rewards
+    .col-md-12
+      - rewards.each do |reward|
+        .panel.panel-default
+          .panel-heading $ #{reward.price}
+          .panel-body
+            = reward.description
 %br
 %br
 .new-project-module.row
