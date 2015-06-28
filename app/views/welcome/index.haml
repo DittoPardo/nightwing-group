@@ -1,21 +1,21 @@
 =render 'carousel'
 
-%h1 Welcome to Nightwing!
-
 .row.text-center
+  .col-lg-12
+    %h1 Welcome to Nightwing!
+
+.row
   .col-lg-12
     %h2 Popular projects
 
-.row
-  .col-lg-4
-    .well
-      %h2 Example 1
-      .p Lorem ipsum...
-  .col-lg-4
-    .well
-      %h2 Example 2
-      .p Lorem ipsum...
-  .col-lg-4
-    .well
-      %h2 Example 2
-      .p Lorem ipsum...
+- popular_projects.each do |project|
+  .row
+    .col-lg-4
+      .well
+        .row
+          .col-md-3
+            %img{src: 'http://dummyimage.com/200x200/237d00/ffffff', alt: project.name}
+          
+          .col-md-9
+            %h2= link_to project.name, project
+            %p= project.description
