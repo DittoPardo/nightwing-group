@@ -23,14 +23,9 @@
     %table.table.table-striped.wide-table
       %thead
         %tr
-          %th #
           %th Name
-          %th Description
-          %th
       %tbody
         - user.owned_projects.each do |project|
           %tr
-            %td= ""
             %td= link_to project.name, project
-            %td= project.description
   .col-md-1
