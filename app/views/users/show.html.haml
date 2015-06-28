@@ -31,6 +31,6 @@
         - user.owned_projects.each do |project|
           %tr
             %td= ""
-            %td= project.name
+            %td= link_to project.name, project
             %td= project.description
   .col-md-1

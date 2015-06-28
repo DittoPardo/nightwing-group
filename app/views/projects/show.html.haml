@@ -19,21 +19,26 @@
       %i.fa.fa-bullhorn
         = project.rewards.count
       rewards
-    .col-md-12.project_info.supporters
+    .project_info.supporters
       - if project.tags.present?
-        %h4
-          Tags
-        %ul.list-unstyled
-          - project.tags.each do |tag|
-            %li= tag
-    .col-md-12.project_info.supporters
+        .new-project-tags.row
+          .col-md-12
+            .panel.panel-success
+              .panel-heading
+                %h3.panel-title Tags
+              .panel-body
+                - project.tags.each do |tag|
+                  %li= tag
+    .project_info.supporters
       - if project.project_contributions.present?
-        %h4
-          Supporters
-        %ul.list-unstyled
-          - project.project_contributions.each do |contribution|
-            %li
-              = contribution.user.name
+        .new-project-contr.row
+          .col-md-12
+            .panel.panel-success
+              .panel-heading
+                %h3.panel-title Supporters
+              .panel-body
+                - project.project_contributions.each do |contribution|
+                  %li= contribution.user.name
     .col-md-12.project_info
       - if current_user.present? and current_user == project.owner
         = link_to 'Edit Project', edit_project_path(project), class: 'btn btn-default btn-small'
