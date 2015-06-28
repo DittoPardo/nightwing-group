@@ -1,0 +1,10 @@
+- if project.project_contributions.present?
+  .new-project-contr.row
+    .col-md-12
+      .panel.panel-success
+        .panel-heading
+          %h3.panel-title Supporters
+        .panel-body
+          - project.project_contributions.each do |contribution|
+            =link_to contribution.user do
+              %li= contribution.user.name

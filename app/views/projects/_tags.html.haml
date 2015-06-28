@@ -1,0 +1,8 @@
+- if project.tags.present?
+  .new-project-tags.row
+    .col-md-12
+      .panel.panel-success
+        .panel-heading
+          %h3.panel-title Tags
+        .panel-body
+          = project.pretty_tag
