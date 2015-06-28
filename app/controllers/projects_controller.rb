@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :create]
   expose(:project)
   expose(:projects)
+  expose(:comments) {project.comments}
+  expose(:comment) {Comment.new}
 
   def index
   end

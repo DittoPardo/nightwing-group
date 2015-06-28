@@ -11,6 +11,13 @@
 
 %button.btn.btn-success Back this project
 
-
-.row
-  = "Komentarze"
+%h3 Comments:
+= render 'comments/list', project: project
+.new-project-module.row
+  .col-md-1
+  .col-md-10
+    .panel.panel-info
+      .panel-heading
+        %h3.panel-title Create comment
+      .panel-body
+        = render 'comments/form'
