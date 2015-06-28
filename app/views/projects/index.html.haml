@@ -1,11 +1,11 @@
-- found_projects.each do |project|
+- projects.each do |project|
   .row
     .col-lg-12
       .well
         .row
           .col-md-3
             %img{src: 'http://dummyimage.com/200x200/237d00/ffffff', alt: project.name}
-          
+
           .col-md-9
             %h2= link_to project.name, project
             %p= project.description
