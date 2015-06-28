@@ -30,8 +30,7 @@
               .panel-heading
                 %h3.panel-title Tags
               .panel-body
-                - project.tags.each do |tag|
-                  %li= tag
+                = project.pretty_tag
     .project_info.supporters
       - if project.project_contributions.present?
         .new-project-contr.row
