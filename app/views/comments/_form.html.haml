@@ -7,6 +7,6 @@
           %li= msg
   .form-group
     = f.label "Add comment"
-    = f.text_field :text
+    = f.text_area :text, class: 'form-control'
 
-  = f.submit 'Save'
+  = f.submit 'Save', class: 'btn btn-info'
