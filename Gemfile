@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'decent_exposure'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'wysiwyg-rails'
+gem 'draper', '~> 1.3'
+gem 'decent_decoration'
 
 group :development, :test do
   gem 'pry-byebug'

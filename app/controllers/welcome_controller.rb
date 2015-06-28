@@ -1,3 +1,3 @@
 class WelcomeController < ApplicationController
-    expose(:popular_projects) { Project.order("RANDOM()").limit(3) }
+  expose_decorated(:popular_projects, decorator: ProjectDecorator) { Project.order("RANDOM()").limit(3) }
 end
