@@ -1,7 +1,7 @@
 .form-horizontal
   = simple_form_for(project_contribution, url: project_project_contributions_path(project), html: { role: 'form' }) do |f|
-    .form-group
+    .form-inputs.inputs-modal
       = f.input :amount, class: 'form-control'
-    .form-group
       = f.input :comment, class: 'form-control'
-    = f.submit "Contribute", class: 'btn btn-default btn-block'
+    .form-actions
+      = f.submit "Contribute", class: 'btn btn-success'

@@ -4,9 +4,8 @@
       .modal-header
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
-        %h4#myModalLabel.modal-title Contribute to this project
+        %h3#myModalLabel.modal-title
+          Contribute to 
+          %b= project.name
       .modal-body
         = render 'project_contributions/form'
-      .modal-footer
-        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
-        %button.btn.btn-primary{:type => "button"} Save changes

@@ -5,7 +5,7 @@ class ProjectContributionsController < ApplicationController
   def create
     if project_contribution.save
       project.project_contributions << project_contribution
-      redirect_to project, notice: 'Thank you for contributing!'
+      redirect_to project, flash[:notice] = 'Thank you for contributing!'
     else
       render 'new'
     end
