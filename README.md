@@ -1,5 +1,3 @@
-== Nightwing group
-
 #Nightwing group
 Sample application prepared during Netguru Ruby on Rails Workshops in Kraków. *Nightwing* is a crowdfunding platform that helps bringing ideas to life.
 
